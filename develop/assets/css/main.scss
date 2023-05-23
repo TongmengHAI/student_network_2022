@@ -336,9 +336,55 @@
                         display: flex;
                         align-items: center;
                         cursor: pointer;
-                        img{
-                            font-size: var(--likeCmtShare_font);
+                        li{
+                            list-style-type: none;
+                            position: relative;
+
+                            img{
+                                font-size: var(--likeCmtShare_font);
+                            }
+                            .content__like_hover{
+                                ul{
+                                    display: none;
+
+                                }
+                            }
+                            
+                        
                         }
+                        &.content__like:hover{
+                            .content__like_hover{
+                                position: absolute;
+                                bottom: 10px;
+                                left: -25px;
+                                
+                                ul{
+                                    display: block;
+
+                                    display: flex;
+                                    background-color: var(--content_background_color);
+                                    padding: 5px 10px;
+                                    border-radius: 50px;
+                                    li{
+                                        transition: 0.98s;
+                                        padding: 0 5px;
+
+                                        img{
+
+                                        }
+                                    }
+                                    li:hover{
+                                        transition: 0.95s;
+                                        top: 10px;
+                                    
+                                        
+                                        
+                                        
+                                    }
+                                }
+
+                            }
+                        }    
                         p{
                             font-size: var(--text_font);
                         }

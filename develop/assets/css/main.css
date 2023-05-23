@@ -288,8 +288,35 @@
   align-items: center;
   cursor: pointer;
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like img {
+.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like li {
+  list-style-type: none;
+  position: relative;
+}
+.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like li img {
   font-size: var(--likeCmtShare_font);
+}
+.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like li .content__like_hover ul {
+  display: none;
+}
+.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like.content__like:hover .content__like_hover {
+  position: absolute;
+  bottom: 10px;
+  left: -25px;
+}
+.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like.content__like:hover .content__like_hover ul {
+  display: block;
+  display: flex;
+  background-color: var(--content_background_color);
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like.content__like:hover .content__like_hover ul li {
+  transition: 0.98s;
+  padding: 0 5px;
+}
+.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like.content__like:hover .content__like_hover ul li:hover {
+  transition: 0.95s;
+  top: 10px;
 }
 .homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like p {
   font-size: var(--text_font);
