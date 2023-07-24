@@ -33,11 +33,11 @@
 .homePage .homePage__container {
   width: var(--homePage_width);
   height: var(--homePage_height);
+  background-color: var(--default_background_color);
   min-width: 390px;
   min-height: 844px;
   max-height: 844px;
   margin: 0 auto;
-  background-color: var(--default_background_color);
   position: relative;
   overflow-x: hidden;
   overflow-y: scroll;

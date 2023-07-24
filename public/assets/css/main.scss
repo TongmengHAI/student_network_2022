@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+// declare variable
 :root{
     --default_background_color:#F5F5F5;
     --headerNavBar_background_color:#009EF7;
@@ -37,14 +38,15 @@
 .homePage{
     // container
     .homePage__container{
+        // use   var(variable) for call it;
         width: var(--homePage_width);
         height:var(--homePage_height);
+        background-color: var(--default_background_color);
 
         min-width: 390px;
         min-height: 844px;
         max-height: 844px;
         margin: 0 auto;
-        background-color: var(--default_background_color);
         position: relative;
 
         overflow-x: hidden;

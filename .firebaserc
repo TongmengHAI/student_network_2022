@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "student-network-44b55"
-  }
+    "student_network": "student-network-35c33"
+  },
+  "targets": {},
+  "etags": {}
 }
