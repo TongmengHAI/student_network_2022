@@ -19,6 +19,7 @@
   --text_font:13px;
   --title_font:15px;
   --icon_font:13px;
+  --text_likeCmtShare:18px;
   --navBar_font:25px;
   --likeCmtShare_font:20px;
   --profile_size:30px;
@@ -30,95 +31,116 @@
   --navbar_height:2.5rem;
 }
 
-.homePage .homePage__container {
-  width: var(--homePage_width);
-  height: var(--homePage_height);
-  background-color: var(--default_background_color);
-  min-width: 390px;
-  min-height: 844px;
-  max-height: 844px;
-  margin: 0 auto;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-.homePage .homePage__container .homePage__container__header {
-  height: var(--header_height);
-  background-color: var(--headerNavBar_background_color);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 15px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-}
-.homePage .homePage__container .homePage__container__header .header__logo {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.homePage .homePage__container .homePage__container__header .header__logo .logo {
-  margin-right: 10px;
-}
-.homePage .homePage__container .homePage__container__header .header__logo .logo img {
-  height: 44px;
-}
-.homePage .homePage__container .homePage__container__header .header__logo .logoName h2 {
-  font-size: var(--logo_font);
-  color: var(--logo_color);
-}
-.homePage .homePage__container .homePage__container__header .header__profile {
-  cursor: pointer;
-}
-.homePage .homePage__container .homePage__container__header .header__profile .profile {
-  transition: 0.3s;
-}
-.homePage .homePage__container .homePage__container__header .header__profile .profile img {
-  width: var(--profile_size);
-  height: var(--profile_size);
-  border-radius: 50%;
-}
-.homePage .homePage__container .homePage__container__header .header__profile .profile:hover {
-  transform: scale(0.95);
-  transition: 0.5s;
-}
-.homePage .homePage__container .homePage__container__navBar {
-  height: var(--navbar_height);
-  background-color: var(--headerNavBar_background_color);
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  position: sticky;
-  left: 0;
-  top: 0;
-}
-.homePage .homePage__container .homePage__container__navBar .navIcon {
-  height: var(--navBar_font);
-}
-.homePage .homePage__container .homePage__container__navBar .navIcon img {
-  width: 100%;
-  height: 100%;
-}
-.homePage .homePage__container .homePage__container__navBar .navBar__home::after {
+.layout .layout__container .navBar__home::after {
   display: block;
   content: "";
   width: 40px;
-  height: 5px;
+  height: 2px;
   background-color: #1349a0;
   border-radius: 10px;
   margin: 0.1rem auto;
 }
-.homePage .homePage__container .homePage__container__createPost {
+.layout .layout__container .grayscreen {
+  position: absolute;
+  display: none;
+  height: 1500px;
+  width: var(--homePage_width);
+  background-color: rgba(0, 0, 0, 0.301);
+  z-index: 1;
+}
+.layout .layout__container .commentSection {
+  position: fixed;
+  display: none;
+  top: 50px;
+  width: var(--homePage_width);
+  height: 480px;
+  background-color: #ECFCFF;
+  z-index: 10;
+}
+.layout .layout__container .commentSection .cmtTop .cmtHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.layout .layout__container .commentSection .cmtTop .cmtHeader .cmtProfile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.layout .layout__container .commentSection .cmtTop .cmtHeader .cmtProfile .profile {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.layout .layout__container .commentSection .cmtTop .cmtHeader .cmtProfile .profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.layout .layout__container .commentSection .cmtTop .cmtHeader .cmtMoreOpt i {
+  font-size: 20px;
+}
+.layout .layout__container .commentSection .cmtBottom .cmtChat {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: start;
+}
+.layout .layout__container .commentSection .cmtBottom .cmtChat .chatProfile {
+  width: 40px;
+  padding: 5px;
+}
+.layout .layout__container .commentSection .cmtBottom .cmtChat .chatProfile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.layout .layout__container .commentSection .cmtBottom .cmtChat .chatContainer {
+  width: 70%;
+}
+.layout .layout__container .commentSection .cmtBottom .cmtChat .chatContainer .chatContent {
+  font-size: 13px;
+  text-align: justify;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  background-color: #E6F4F1;
+  padding: 10px;
+}
+.layout .layout__container .commentSection .cmtBottom .cmtChat .chatContainer .date {
+  font-size: 13px;
+  color: gray;
+  padding-left: 10px;
+}
+.layout .layout__container .commentSection .inputSection {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: end;
+  padding: 10px;
+}
+.layout .layout__container .commentSection .inputSection input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.layout .layout__container .showCmtSectionAndgrarscreen {
+  display: block;
+}
+.layout .layout__container .homePage__postContainer .homePage__container__createPost {
   height: var(--createPost_height);
-  background-color: var(--content_background_color);
+  background-color: #BFE7FD;
   margin-top: 15px;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
-.homePage .homePage__container .homePage__container__createPost .createPost__title h3 {
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__title h3 {
   font-size: var(--title_font);
   color: var(--createPost_title_color);
 }
-.homePage .homePage__container .homePage__container__createPost .createPost__title::after {
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__title::after {
   display: block;
   content: "";
   width: 365px;
@@ -127,30 +149,30 @@
   border-radius: 10px;
   margin: 0.1rem auto;
 }
-.homePage .homePage__container .homePage__container__createPost .createPost__profile_inputText {
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText {
   display: flex;
   align-items: center;
   padding: 10px 0;
 }
-.homePage .homePage__container .homePage__container__createPost .createPost__profile_inputText .userProfile {
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText .userProfile {
   padding-right: 10px;
   cursor: pointer;
   transition: 0.3s;
 }
-.homePage .homePage__container .homePage__container__createPost .createPost__profile_inputText .userProfile img {
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText .userProfile img {
   height: var(--profile_size);
   border-radius: 50%;
 }
-.homePage .homePage__container .homePage__container__createPost .createPost__profile_inputText .userProfile:hover {
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText .userProfile:hover {
   transform: scale(0.95);
   transition: 0.5s;
 }
-.homePage .homePage__container .homePage__container__createPost .createPost__profile_inputText #writePost {
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText #writePost {
   width: 320px;
   height: 30px;
   border-radius: 10px;
 }
-.homePage .homePage__container .homePage__container__createPost .createPost__profile_inputText #writePost input {
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText #writePost input {
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -159,13 +181,13 @@
   padding: 5px;
   font-size: var(--text_font);
 }
-.homePage .homePage__container .homePage__container__createPost .createPost__profile_inputText #writePost input::-moz-placeholder {
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText #writePost input::-moz-placeholder {
   color: #A1A5B7;
 }
-.homePage .homePage__container .homePage__container__createPost .createPost__profile_inputText #writePost input::placeholder {
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText #writePost input::placeholder {
   color: #A1A5B7;
 }
-.homePage .homePage__container .homePage__container__createPost ul {
+.layout .layout__container .homePage__postContainer .homePage__container__createPost ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -174,67 +196,67 @@
   padding-bottom: 10px;
   margin-top: 20px;
 }
-.homePage .homePage__container .homePage__container__createPost ul li button {
+.layout .layout__container .homePage__postContainer .homePage__container__createPost ul li button {
   width: 105px;
   height: 30px;
   text-align: center;
   font-size: var(--menu_font);
   font-weight: 800;
   border-radius: 10px;
-  background-color: var(--menu_background_color);
+  background-color: #E6F4F1;
   border: 1px solid #0095E8;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   cursor: pointer;
   transition: 0.3s;
 }
-.homePage .homePage__container .homePage__container__createPost ul li button:hover {
+.layout .layout__container .homePage__postContainer .homePage__container__createPost ul li button:hover {
   transform: scale(0.98);
   transition: 0.5s;
 }
-.homePage .homePage__container .homePage__container__content {
+.layout .layout__container .homePage__postContainer .homePage__container__content {
   height: var(--content_height);
   background-color: var(--content_background_color);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   margin-top: 20px;
   padding: 15px;
 }
-.homePage .homePage__container .homePage__container__content .content__header .content__header__container {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__header .content__header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.homePage .homePage__container .homePage__container__content .content__header .content__header__container .content__header__userProfile {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__header .content__header__container .content__header__userProfile {
   display: flex;
   align-items: center;
 }
-.homePage .homePage__container .homePage__container__content .content__header .content__header__container .content__header__userProfile .userProfile {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__header .content__header__container .content__header__userProfile .userProfile {
   margin-right: 10px;
   cursor: pointer;
   transition: 0.3s;
 }
-.homePage .homePage__container .homePage__container__content .content__header .content__header__container .content__header__userProfile .userProfile img {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__header .content__header__container .content__header__userProfile .userProfile img {
   height: 35px;
   border-radius: 50%;
 }
-.homePage .homePage__container .homePage__container__content .content__header .content__header__container .content__header__userProfile .userProfile:hover {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__header .content__header__container .content__header__userProfile .userProfile:hover {
   transform: scale(0.95);
   transition: 0.5s;
 }
-.homePage .homePage__container .homePage__container__content .content__header .content__header__container .content__header__userProfile .userName {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__header .content__header__container .content__header__userProfile .userName {
   font-size: var(--title_font);
   font-weight: 550;
 }
-.homePage .homePage__container .homePage__container__content .content__header .content__header__container .content__header__cancel_moreIcon {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__header .content__header__container .content__header__cancel_moreIcon {
   display: flex;
   align-items: center;
 }
-.homePage .homePage__container .homePage__container__content .content__header .content__header__container .content__header__cancel_moreIcon .cancelIcon {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__header .content__header__container .content__header__cancel_moreIcon .cancelIcon {
   cursor: pointer;
 }
-.homePage .homePage__container .homePage__container__content .content__header .content__header__container .content__header__cancel_moreIcon .moreIcon {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__header .content__header__container .content__header__cancel_moreIcon .moreIcon {
   cursor: pointer;
 }
-.homePage .homePage__container .homePage__container__content .content__header::after {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__header::after {
   display: block;
   content: "";
   width: 365px;
@@ -243,12 +265,12 @@
   border-radius: 10px;
   margin: 0.1rem auto;
 }
-.homePage .homePage__container .homePage__container__content .content__caption {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__caption {
   margin-top: 10px;
   font-size: var(--text_font);
   text-align: justify;
 }
-.homePage .homePage__container .homePage__container__content .imagePost__section {
+.layout .layout__container .homePage__postContainer .homePage__container__content .imagePost__section {
   height: 185px;
   display: grid;
   grid-template-rows: 100px 80px;
@@ -257,93 +279,102 @@
   gap: 3px;
   margin-top: 10px;
 }
-.homePage .homePage__container .homePage__container__content .imagePost__section .image img {
+.layout .layout__container .homePage__postContainer .homePage__container__content .imagePost__section .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.homePage .homePage__container .homePage__container__content .imagePost__section .imagePost__section__img1 {
+.layout .layout__container .homePage__postContainer .homePage__container__content .imagePost__section .imagePost__section__img1 {
   grid-area: img1;
 }
-.homePage .homePage__container .homePage__container__content .imagePost__section .imagePost__section__img2 {
+.layout .layout__container .homePage__postContainer .homePage__container__content .imagePost__section .imagePost__section__img2 {
   grid-area: img2;
 }
-.homePage .homePage__container .homePage__container__content .imagePost__section .imagePost__section__img3 {
+.layout .layout__container .homePage__postContainer .homePage__container__content .imagePost__section .imagePost__section__img3 {
   grid-area: img3;
 }
-.homePage .homePage__container .homePage__container__content .imagePost__section .imagePost__section__img4 {
+.layout .layout__container .homePage__postContainer .homePage__container__content .imagePost__section .imagePost__section__img4 {
   grid-area: img4;
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare {
   margin-top: 10px;
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like {
   display: flex;
   align-items: center;
   cursor: pointer;
+  padding: 8px 18px;
+  border-radius: 10px;
+  background-color: #E6F4F1;
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like li {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like li {
   list-style-type: none;
   position: relative;
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like li img {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like li img {
   font-size: var(--likeCmtShare_font);
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like li .content__like_hover ul {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like li .content__like_hover ul {
   display: none;
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like.content__like:hover .content__like_hover {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like.content__like:hover .content__like_hover {
   position: absolute;
   bottom: 10px;
   left: -25px;
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like.content__like:hover .content__like_hover ul {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like.content__like:hover .content__like_hover ul {
   display: block;
   display: flex;
   background-color: var(--content_background_color);
   padding: 5px 10px;
   border-radius: 50px;
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like.content__like:hover .content__like_hover ul li {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like.content__like:hover .content__like_hover ul li {
   transition: 0.98s;
   padding: 0 5px;
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like.content__like:hover .content__like_hover ul li:hover {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like.content__like:hover .content__like_hover ul li:hover {
   transition: 0.95s;
   top: 10px;
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like p {
-  font-size: var(--text_font);
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__like p {
+  font-size: var(--text_likeCmtShare);
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__cmt {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__cmt {
   display: flex;
   align-items: center;
   cursor: pointer;
+  padding: 8px 18px;
+  border-radius: 10px;
+  background-color: #E6F4F1;
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__cmt img {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__cmt img {
   font-size: var(--likeCmtShare_font);
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__cmt p {
-  font-size: var(--text_font);
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__cmt p {
+  font-size: var(--text_likeCmtShare);
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__share {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__share {
   display: flex;
   align-items: center;
   cursor: pointer;
+  padding: 8px 18px;
+  border-radius: 10px;
+  background-color: #E6F4F1;
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__share img {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__share img {
   font-size: var(--likeCmtShare_font);
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__share p {
-  font-size: var(--text_font);
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare .content__likeCmtShare__container .content__share p {
+  font-size: var(--text_likeCmtShare);
 }
-.homePage .homePage__container .homePage__container__content .content__likeCmtShare::after {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__likeCmtShare::after {
   display: block;
   content: "";
   width: 365px;
@@ -352,11 +383,11 @@
   border-radius: 10px;
   margin: 0.3rem auto;
 }
-.homePage .homePage__container .homePage__container__content .content__inputCmt {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__inputCmt {
   height: 30px;
   margin-top: 15px;
 }
-.homePage .homePage__container .homePage__container__content .content__inputCmt input {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__inputCmt input {
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -365,9 +396,9 @@
   padding: 5px;
   font-size: var(--text_font);
 }
-.homePage .homePage__container .homePage__container__content .content__inputCmt input::-moz-placeholder {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__inputCmt input::-moz-placeholder {
   color: #A1A5B7;
 }
-.homePage .homePage__container .homePage__container__content .content__inputCmt input::placeholder {
+.layout .layout__container .homePage__postContainer .homePage__container__content .content__inputCmt input::placeholder {
   color: #A1A5B7;
 }/*# sourceMappingURL=main.css.map */

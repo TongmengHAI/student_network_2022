@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="icon" href="../assets/images/WeTalk_logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  </head>
+  <body>
+    <!-- home page -->
+    <div class="layout" >
+      <!-- container -->
+      <div class="layout__container">
+        <!-- header -->
+        <header class="container__header">
+          <!-- logo -->
+          <div class="header__logo">
+            <a href="./homePage.html" class="logo">
+              <img src="../assets/images/WeTalk_logo.png" alt="WeTalk logo">
+            </a>
+            <div class="logoName " ><h2>WeTalk</h2></div>
+          </div>
+          <!-- user profile -->
+          <div class="header__profile">
+            
+            <a href="./profilePage.html">
+              <div class="profile">
+                <img src="../assets/images/user_profile.jpg" alt="user profile">
+              </div>
+            </a>
+          </div>
+        </header>
+
+        <!-- navigation bar -->
+        <nav class="container__navBar">
+          <!-- home -->
+          <a href="./homePage.html" class="navBar__home  navIcon">
+            <i class='bx bxs-home-alt-2'></i>
+          </a>
+          <!-- friend -->
+          <a href="./friendpage.html" class="navBar__friend navIcon">
+            <i class='bx bxs-user-account'></i>
+          </a>
+          <!-- share book -->
+          <a href="./shareBookPage.html" class="navBar__shareBook navIcon">
+            <i class='bx bx-book' ></i>
+          </a> 
+          <!-- chat -->
+          <a href="./chatPage.html" class="navBar__chat navIcon">
+            <i class='bx bx-message-alt-edit'></i>
+          </a> 
+        </nav>
+
+        <!-- gray screen -->
+        <div id="grayscreen" class="grayscreen"></div>
+        <div id="commentSection"class="commentSection">
+          <div class="cmtTop">
+            <div class="cmtHeader">
+              <div class="cmtProfile">
+                <div class="profile"><img src="https://wallpapers.com/images/hd/cool-profile-picture-87h46gcobjl5e4xu.jpg" alt=""></div>
+                <div class="userName">Charlotte Fischer</div>
+              </div>
+              <div class="cmtMoreOpt">
+                <i style="cursor: pointer;" class='bx bx-x' id="cmtXbtn"></i>
+                <i class='bx bx-dots-vertical-rounded'></i>
+              </div>
+            </div>
+          </div>
+          <hr style="width: 80%; margin: 0 auto; border-color: rgba(128, 128, 128, 0.13);">
+          <div class="cmtBottom">
+            <div class="cmtChat1 cmtChat">
+              <div class="chatProfile"><img src="https://wallpapers.com/images/hd/cool-profile-picture-87h46gcobjl5e4xu.jpg" alt=""></div>
+              <div class="chatContainer">
+                <div class="chatContent"><h2>Emma</h2><br>Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, voluptatibus.</div>
+                <div class="date"><span>Like   Reply  1h</span></div>
+              </div>
+              
+
+            </div>
+            <div class="cmtChat2 cmtChat">
+              <div class="chatProfile"><img src="https://wallpapers.com/images/hd/cool-profile-picture-87h46gcobjl5e4xu.jpg" alt=""></div>
+              
+              <div class="chatContainer">
+                <div class="chatContent"><h2>Emma</h2><br>Lorem ipsum dolor sit amet.</div>
+                <div class="date"><span>Like   Reply  1h</span></div>
+              </div>
+              
+
+            </div>
+          </div>
+          <div class="inputSection">
+            <input type="text" placeholder="Write something here">
+          </div>
+        </div>
+
+        <div class="homePage__postContainer">
+
+          <!-- create post section -->
+          <div class="homePage__container__createPost">
+            <!-- title -->
+            <div class="createPost__title">
+              <h3>Create Post</h3>
+            </div>
+            <!-- profile write post section -->
+            <div class="createPost__profile_inputText">
+              <!-- profile -->
+              <div class="userProfile">
+                <img src="../assets/images/user_profile.jpg" alt="">
+              </div>
+              <!-- write post -->
+              <div id="writePost">
+                <input type="text" placeholder="Write something here">
+              </div>
+            </div>
+            <!-- menu -->
+            <ul>
+              <li><button>Photos/Videos</button></li>
+              <li><button>Tag friends</button></li>
+              <li><button>Live</button></li>
+            </ul>
+          </div>
+
+          <!-- main content section -->
+          <main class="homePage__container__content">
+            <!-- header -->
+            <div class="content__header">
+              <div class="content__header__container">
+                <!-- user profile -->
+                <div class="content__header__userProfile">
+                  <!-- profile -->
+                  <div class="userProfile"><img src="../assets/images/cat.webp" alt="user profile"></div>
+                  <!-- username -->
+                  <div class="userName">Deja Vu</div>
+                </div>
+                <!-- icon -->
+                <div class="content__header__cancel_moreIcon">
+                  <div class="cancelIcon"><img src="../assets/icons/bx-x.svg" alt="cancel icon"></div>
+                  <div class="moreIcon"><img src="../assets/icons/bx-dots-vertical-rounded.svg" alt="more icon"></div>
+                </div>
+              </div>
+              
+            </div>
+            <!-- caption -->
+            <article class="content__caption">
+              <p><b>A crop circle, crop formation, or corn circle </b> is a pattern created by flattening a crop, usually a cereal. The term was first coined in the early 1980s by Colin Andrews. <a href="https://youtu.be/cXUnlxZTxHM " target="_blank">https://youtu.be/cXUnlxZTxHM </a></p>
+            </article>
+            <!-- image post -->
+            <div class="imagePost__section">
+              <div class="imagePost__section__img1 image"><img style="border-radius: 5px;" src="../assets/images/horizotalCropcircle.jpg" alt=""></div>
+              <div class="imagePost__section__img2 image"><img style="border-radius: 5px; " src="../assets/images/question.webp" alt=""></div>
+              <div class="imagePost__section__img3 image"><img style="border-radius: 5px;" src="../assets/images/cropcircle.jpg" alt=""></div>
+              <div class="imagePost__section__img4 image"><img style="border-radius: 5px;" src="../assets/images/cropcircle2.jpg" alt=""></div>
+            </div>
+            <!-- react section -->
+            <div class="content__likeCmtShare">
+              <div class="content__likeCmtShare__container">
+                <!-- like -->
+                <ul class="content__like">
+                  <li class="like_icon"><img src="../assets/icons/bx-like.svg" alt=""></li>
+                  <li>
+                    <div class="content__like_hover">
+                      <ul>
+                        <li><img src="../assets/icons/bxs-like.svg" alt=""></li>
+                        <li><img src="../assets/icons/bxs-heart.svg" alt=""></li>
+                        <li><img src="../assets/icons/bxs-laugh.svg" alt=""></li>
+                        <li><img src="../assets/icons/bxs-sad.svg" alt=""></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <p>1</p>
+                </ul>
+                <!-- comment -->
+                <div class="content__cmt" id="content__cmt">
+                  <img src="../assets/icons/bx-message-alt-detail.svg" alt="">
+                  <p>2</p>
+                </div>
+                <!-- share -->
+                <div class="content__share">
+                  <img src="../assets/icons/bx-share-alt.svg" alt="">
+                  <p></p>
+                </div>
+              </div>
+              
+            </div>
+            <!-- write comment section -->
+            <div class="content__inputCmt"><input type="text" placeholder="Write something here"></div>
+
+          </main>
+
+          <main class="homePage__container__content">
+            <!-- header -->
+            <div class="content__header">
+              <div class="content__header__container">
+                <!-- user profile -->
+                <div class="content__header__userProfile">
+                  <!-- profile -->
+                  <div class="userProfile"><img src="../assets/images/cat.webp" alt="user profile"></div>
+                  <!-- username -->
+                  <div class="userName">Deja Vu</div>
+                </div>
+                <!-- icon -->
+                <div class="content__header__cancel_moreIcon">
+                  <div class="cancelIcon"><img src="../assets/icons/bx-x.svg" alt="cancel icon"></div>
+                  <div class="moreIcon"><img src="../assets/icons/bx-dots-vertical-rounded.svg" alt="more icon"></div>
+                </div>
+              </div>
+              
+            </div>
+            <!-- caption -->
+            <article class="content__caption">
+              <p><b>A crop circle, crop formation, or corn circle </b> is a pattern created by flattening a crop, usually a cereal. The term was first coined in the early 1980s by Colin Andrews. <a href="https://youtu.be/cXUnlxZTxHM " target="_blank">https://youtu.be/cXUnlxZTxHM </a></p>
+            </article>
+            <!-- image post -->
+            <div class="imagePost__section">
+              <div class="imagePost__section__img1 image"><img style="border-radius: 5px;" src="../assets/images/horizotalCropcircle.jpg" alt=""></div>
+              <div class="imagePost__section__img2 image"><img style="border-radius: 5px; " src="../assets/images/question.webp" alt=""></div>
+              <div class="imagePost__section__img3 image"><img style="border-radius: 5px;" src="../assets/images/cropcircle.jpg" alt=""></div>
+              <div class="imagePost__section__img4 image"><img style="border-radius: 5px;" src="../assets/images/cropcircle2.jpg" alt=""></div>
+            </div>
+            <!-- react section -->
+            <div class="content__likeCmtShare">
+              <div class="content__likeCmtShare__container">
+                <!-- like -->
+                <ul class="content__like">
+                  <li class="like_icon"><img src="../assets/icons/bx-like.svg" alt=""></li>
+                  <li>
+                    <div class="content__like_hover">
+                      <ul>
+                        <li><img src="../assets/icons/bxs-like.svg" alt=""></li>
+                        <li><img src="../assets/icons/bxs-heart.svg" alt=""></li>
+                        <li><img src="../assets/icons/bxs-laugh.svg" alt=""></li>
+                        <li><img src="../assets/icons/bxs-sad.svg" alt=""></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <p>1</p>
+                </ul>
+                <!-- comment -->
+                <div class="content__cmt" id="content__cmt">
+                  <img src="../assets/icons/bx-message-alt-detail.svg" alt="">
+                  <p>2</p>
+                </div>
+                <!-- share -->
+                <div class="content__share">
+                  <img src="../assets/icons/bx-share-alt.svg" alt="">
+                  <p></p>
+                </div>
+              </div>
+              
+            </div>
+            <!-- write comment section -->
+            <div class="content__inputCmt"><input type="text" placeholder="Write something here"></div>
+
+          </main>
+
+          <main class="homePage__container__content">
+            <!-- header -->
+            <div class="content__header">
+              <div class="content__header__container">
+                <!-- user profile -->
+                <div class="content__header__userProfile">
+                  <!-- profile -->
+                  <div class="userProfile"><img src="../assets/images/cat.webp" alt="user profile"></div>
+                  <!-- username -->
+                  <div class="userName">Deja Vu</div>
+                </div>
+                <!-- icon -->
+                <div class="content__header__cancel_moreIcon">
+                  <div class="cancelIcon"><img src="../assets/icons/bx-x.svg" alt="cancel icon"></div>
+                  <div class="moreIcon"><img src="../assets/icons/bx-dots-vertical-rounded.svg" alt="more icon"></div>
+                </div>
+              </div>
+              
+            </div>
+            <!-- caption -->
+            <article class="content__caption">
+              <p><b>A crop circle, crop formation, or corn circle </b> is a pattern created by flattening a crop, usually a cereal. The term was first coined in the early 1980s by Colin Andrews. <a href="https://youtu.be/cXUnlxZTxHM " target="_blank">https://youtu.be/cXUnlxZTxHM </a></p>
+            </article>
+            <!-- image post -->
+            <div class="imagePost__section">
+              <div class="imagePost__section__img1 image"><img style="border-radius: 5px;" src="../assets/images/horizotalCropcircle.jpg" alt=""></div>
+              <div class="imagePost__section__img2 image"><img style="border-radius: 5px; " src="../assets/images/question.webp" alt=""></div>
+              <div class="imagePost__section__img3 image"><img style="border-radius: 5px;" src="../assets/images/cropcircle.jpg" alt=""></div>
+              <div class="imagePost__section__img4 image"><img style="border-radius: 5px;" src="../assets/images/cropcircle2.jpg" alt=""></div>
+            </div>
+            <!-- react section -->
+            <div class="content__likeCmtShare">
+              <div class="content__likeCmtShare__container">
+                <!-- like -->
+                <ul class="content__like">
+                  <li class="like_icon"><img src="../assets/icons/bx-like.svg" alt=""></li>
+                  <li>
+                    <div class="content__like_hover">
+                      <ul>
+                        <li><img src="../assets/icons/bxs-like.svg" alt=""></li>
+                        <li><img src="../assets/icons/bxs-heart.svg" alt=""></li>
+                        <li><img src="../assets/icons/bxs-laugh.svg" alt=""></li>
+                        <li><img src="../assets/icons/bxs-sad.svg" alt=""></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <p>1</p>
+                </ul>
+                <!-- comment -->
+                <div class="content__cmt" id="content__cmt">
+                  <img src="../assets/icons/bx-message-alt-detail.svg" alt="">
+                  <p>2</p>
+                </div>
+                <!-- share -->
+                <div class="content__share">
+                  <img src="../assets/icons/bx-share-alt.svg" alt="">
+                  <p></p>
+                </div>
+              </div>
+              
+            </div>
+            <!-- write comment section -->
+            <div class="content__inputCmt"><input type="text" placeholder="Write something here"></div>
+
+          </main>
+
+          <main class="homePage__container__content">
+            <!-- header -->
+            <div class="content__header">
+              <div class="content__header__container">
+                <!-- user profile -->
+                <div class="content__header__userProfile">
+                  <!-- profile -->
+                  <div class="userProfile"><img src="../assets/images/cat.webp" alt="user profile"></div>
+                  <!-- username -->
+                  <div class="userName">Deja Vu</div>
+                </div>
+                <!-- icon -->
+                <div class="content__header__cancel_moreIcon">
+                  <div class="cancelIcon"><img src="../assets/icons/bx-x.svg" alt="cancel icon"></div>
+                  <div class="moreIcon"><img src="../assets/icons/bx-dots-vertical-rounded.svg" alt="more icon"></div>
+                </div>
+              </div>
+              
+            </div>
+            <!-- caption -->
+            <article class="content__caption">
+              <p><b>A crop circle, crop formation, or corn circle </b> is a pattern created by flattening a crop, usually a cereal. The term was first coined in the early 1980s by Colin Andrews. <a href="https://youtu.be/cXUnlxZTxHM " target="_blank">https://youtu.be/cXUnlxZTxHM </a></p>
+            </article>
+            <!-- image post -->
+            <div class="imagePost__section">
+              <div class="imagePost__section__img1 image"><img style="border-radius: 5px;" src="../assets/images/horizotalCropcircle.jpg" alt=""></div>
+              <div class="imagePost__section__img2 image"><img style="border-radius: 5px; " src="../assets/images/question.webp" alt=""></div>
+              <div class="imagePost__section__img3 image"><img style="border-radius: 5px;" src="../assets/images/cropcircle.jpg" alt=""></div>
+              <div class="imagePost__section__img4 image"><img style="border-radius: 5px;" src="../assets/images/cropcircle2.jpg" alt=""></div>
+            </div>
+            <!-- react section -->
+            <div class="content__likeCmtShare">
+              <div class="content__likeCmtShare__container">
+                <!-- like -->
+                <ul class="content__like">
+                  <li class="like_icon"><img src="../assets/icons/bx-like.svg" alt=""></li>
+                  <li>
+                    <div class="content__like_hover">
+                      <ul>
+                        <li><img src="../assets/icons/bxs-like.svg" alt=""></li>
+                        <li><img src="../assets/icons/bxs-heart.svg" alt=""></li>
+                        <li><img src="../assets/icons/bxs-laugh.svg" alt=""></li>
+                        <li><img src="../assets/icons/bxs-sad.svg" alt=""></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <p>1</p>
+                </ul>
+                <!-- comment -->
+                <div class="content__cmt" id="content__cmt">
+                  <img src="../assets/icons/bx-message-alt-detail.svg" alt="">
+                  <p>2</p>
+                </div>
+                <!-- share -->
+                <div class="content__share">
+                  <img src="../assets/icons/bx-share-alt.svg" alt="">
+                  <p></p>
+                </div>
+              </div>
+              
+            </div>
+            <!-- write comment section -->
+            <div class="content__inputCmt"><input type="text" placeholder="Write something here"></div>
+
+          </main>
+
+
+        </div>
+        
+      </div>
+
+    </div>
+  </body>
+
+
+  <script>
+    const xBtn = document.getElementById("cmtXbtn");
+    const cmtBtn = document.getElementById("content__cmt");
+
+    xBtn.addEventListener("click", ()=>{
+      const cmtSection = document.getElementById("commentSection");
+      const grayscreen = document.getElementById("grayscreen");
+      grayscreen.classList.remove("showCmtSectionAndgrarscreen")
+      cmtSection.classList.remove("showCmtSectionAndgrarscreen");
+    })
+    cmtBtn.addEventListener("click",()=>{
+      const cmtSection = document.getElementById("commentSection");
+      const grayscreen = document.getElementById("grayscreen");
+      grayscreen.classList.add("showCmtSectionAndgrarscreen")
+      cmtSection.classList.add("showCmtSectionAndgrarscreen");
+    })
+
+    
+    
+  </script>
+</html>

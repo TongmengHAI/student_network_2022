@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friend page</title>
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="icon" href="../assets/images/WeTalk_logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+  <style>
+    
+    .navBar__friend::after{
+      display: block;
+      content: "";
+      width: 40px;
+      height: 2px;
+      background-color: #1349a0;
+      border-radius: 10px;
+      margin: 0.1rem auto;
+    }
+    
+      /* width */
+      .allFriendContainer::-webkit-scrollbar {
+        width: 1px;
+      }
+
+      /* Track */
+      .allFriendContainer::-webkit-scrollbar-track {
+        background: #E7F6F5; 
+      }
+      
+      /* Handle */
+      .allFriendContainer::-webkit-scrollbar-thumb {
+        background: #E7F6F5; 
+      }
+
+      /* Handle on hover */
+      .allFriendContainer::-webkit-scrollbar-thumb:hover {
+        background: #E7F6F5; 
+      }
+      .friendCard{
+        cursor: pointer;
+
+      }
+      .friendCard:hover{
+        background-color:rgba(255, 255, 255, 0.596);
+      }
+
+
+  </style>
+  <body>
+    <!-- home page -->
+    <div class="layout" >
+      <!-- container -->
+      <div class="layout__container">
+        <!-- header -->
+        <header class="container__header">
+          <!-- logo -->
+          <div class="header__logo">
+            <a href="./homePage.html" class="logo">
+              <img src="../assets/images/WeTalk_logo.png" alt="WeTalk logo">
+            </a>
+            <div class="logoName"><h2>WeTalk</h2></div>
+          </div>
+          <!-- user profile -->
+          <div class="header__profile">
+            
+            <a href="./profilePage.html">
+              <div class="profile">
+                <img src="../assets/images/user_profile.jpg" alt="user profile">
+              </div>
+            </a>
+          </div>
+        </header>
+
+        <!-- navigation bar -->
+        <nav class="container__navBar">
+          <!-- home -->
+          <a href="./homePage.html" class="navBar__home  navIcon">
+            <i class='bx bxs-home-alt-2' style="color: #BFE7FD; "></i>
+          </a>
+          <!-- friend -->
+          <a href="./friendpage.html" class="navBar__friend navIcon">
+            <i class='bx bxs-user-account' style="color:#1349a0"></i>
+          </a>
+          <!-- share book -->
+          <a href="./shareBookPage.html" class="navBar__shareBook navIcon">
+            <i class='bx bx-book' ></i>
+          </a> 
+          <!-- chat -->
+          <a href="./chatPage.html" class="navBar__chat navIcon">
+            <i class='bx bx-message-alt-edit'></i>
+          </a> 
+        </nav>
+
+        <!-- friends section -->
+        <div class="friendsSection">
+ <!-- friend request -->
+ <div class="requestFrident w-full bg-[#E7F6F5] shadow-md mt-[15px] p-[10px]">
+   <div class="subtitle text-lg font-semibold">Friend request</div>
+   <hr>
+   <div class="friendContainer p-[10px] ">
+
+     <div class="friendCard p-2 flex justify-between items-center ">
+       <div class="friendProfile flex ">
+         <div class="profile w-[30px] h-[30px] mr-[10px]">
+  <img class="w-full h-full object-cover rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="">
+         </div>
+         <div class="userName font-bold">Cafia</div>
+       </div>
+       <div class="optButton flex items-center justify-between">
+         <button class="friBtn friBtnRemove py-[3px] px-[20px] mr-2 bg-blue-600 rounded-xl text-white text-sm">Confirm</button>
+         <button class="friBtn friBtnConfirm py-[3px] px-[20px]  bg-red-600 rounded-xl text-white text-sm">Remove</button>
+       </div>
+     </div>
+     <div class="friendCard p-2 flex justify-between items-center ">
+       <div class="friendProfile flex ">
+         <div class="profile w-[30px] h-[30px] mr-[10px]">
+  <img class="w-full h-full object-cover rounded-full" src="../assets/images/fri2.jpg" alt="">
+         </div>
+         <div class="userName font-bold">Simon</div>
+       </div>
+       <div class="optButton flex items-center justify-between">
+         <button class="friBtn friBtnRemove py-[3px] px-[20px] mr-2 bg-blue-600 rounded-xl text-white text-sm">Confirm</button>
+         <button class="friBtn friBtnConfirm py-[3px] px-[20px]  bg-red-600 rounded-xl text-white text-sm">Remove</button>
+       </div>
+     </div>
+     <div class="friendCard p-2 flex justify-between items-center ">
+       <div class="friendProfile flex ">
+         <div class="profile w-[30px] h-[30px] mr-[10px]">
+  <img class="w-full h-full object-cover rounded-full" src="../assets/images/fri3.jpg" alt="">
+         </div>
+         <div class="userName font-bold">Dia plo</div>
+       </div>
+       <div class="optButton flex items-center justify-between">
+         <button class="friBtn friBtnRemove py-[3px] px-[20px] mr-2 bg-blue-600 rounded-xl text-white text-sm">Confirm</button>
+         <button class="friBtn friBtnConfirm py-[3px] px-[20px]  bg-red-600 rounded-xl text-white text-sm">Remove</button>       </div>
+     </div>
+     <div class="viewMore">
+       <p class="flex items-center justify-center font-medium">View more <i class='bx bxs-chevron-down'></i> </p>
+     </div>
+   </div>
+ </div>
+ <!-- add friend -->
+ <div class="addFrident w-full bg-[#E7F6F5] shadow-md mt-[15px] p-[10px]">
+   <div class="subtitle text-lg font-semibold">Add Friend</div>
+   <hr>
+   <div class="friendContainer p-[10px] ">
+
+     <div class="friendCard p-2 flex justify-between items-center ">
+       <div class="friendProfile flex ">
+         <div class="profile w-[30px] h-[30px] mr-[10px]">
+  <img class="w-full h-full object-cover rounded-full" src="../assets/images/fri4.jpg" alt="">
+         </div>
+         <div class="userName font-bold">Arima Kousei</div>
+       </div>
+       <div class="optButton flex items-center justify-between">
+         <button class="friBtn friBtnConfirm py-[3px] px-[10px] mr-2 bg-blue-600 rounded-xl text-white text-sm">Add Friend</button>
+       </div>
+     </div>
+     <div class="friendCard p-2 flex justify-between items-center ">
+       <div class="friendProfile flex ">
+         <div class="profile w-[30px] h-[30px] mr-[10px]">
+  <img class="w-full h-full object-cover rounded-full" src="../assets/images/fri5.jpg" alt="">
+         </div>
+         <div class="userName font-bold">Wednesday</div>
+       </div>
+       <div class="optButton flex items-center justify-between">
+         <button class="friBtn friBtnAdd Friend py-[3px] px-[10px] mr-2 bg-blue-600 rounded-xl text-white text-sm">Add Friend</button>
+       </div>
+     </div>
+     <div class="friendCard p-2 flex justify-between items-center ">
+       <div class="friendProfile flex ">
+         <div class="profile w-[30px] h-[30px] mr-[10px]">
+  <img class="w-full h-full object-cover rounded-full" src="../assets/images/fri6.avif" alt="">
+         </div>
+         <div class="userName font-bold">Harry</div>
+       </div>
+       <div class="optButton flex items-center justify-between">
+         <button class="friBtn friBtnAdd py-[3px] px-[10px] mr-2 bg-blue-600 rounded-xl text-white text-sm">Add Friend</button>
+       </div>
+     </div>
+     <div class="viewMore w-full">
+       <p class="flex items-center justify-center font-medium">View more <i class='bx bxs-chevron-down'></i> </p>
+     </div>
+   </div>
+ </div>
+ <!-- all friend  -->
+ <div class="allFrident w-full bg-[#E7F6F5] shadow-md mt-[15px] p-[10px]">
+   <div class="subtitle text-lg font-semibold">All Friends</div>
+   <hr>
+   <div class="friendContainer allFriendContainer p-[10px] h-[200px] overflow-auto">
+
+     <div class="friendCard p-2 flex justify-between items-center ">
+       <div class="friendProfile flex ">
+         <div class="profile w-[30px] h-[30px] mr-[10px]">
+  <img class="w-full h-full object-cover rounded-full" src="../assets/images/fri7.avif" alt="">
+         </div>
+         <div class="userName font-bold">Chris Pratt</div>
+       </div>
+       <div class="optButton flex items-center justify-between">
+         <button class="friBtn friBtnDelete py-[3px] px-[20px] mr-2 bg-red-600 rounded-xl text-white text-sm">Delete</button>
+       </div>
+     </div>
+     <div class="friendCard p-2 flex justify-between items-center ">
+       <div class="friendProfile flex ">
+         <div class="profile w-[30px] h-[30px] mr-[10px]">
+  <img class="w-full h-full object-cover rounded-full" src="../assets/images/fri7.avif" alt="">
+         </div>
+         <div class="userName font-bold">Chris Pratt</div>
+       </div>
+       <div class="optButton flex items-center justify-between">
+         <button class="friBtn friBtnDelete Friend py-[3px] px-[20px] mr-2 bg-red-600 rounded-xl text-white text-sm">Delete</button>
+       </div>
+     </div>
+     <div class="friendCard p-2 flex justify-between items-center ">
+       <div class="friendProfile flex ">
+         <div class="profile w-[30px] h-[30px] mr-[10px]">
+  <img class="w-full h-full object-cover rounded-full" src="../assets/images/fri7.avif" alt="">
+         </div>
+         <div class="userName font-bold">Chris Pratt</div>
+       </div>
+       <div class="optButton flex items-center justify-between">
+         <button class="friBtn friBtnDelete py-[3px] px-[20px] mr-2 bg-red-600 rounded-xl text-white text-sm">Delete</button>
+       </div>
+     </div>
+
+     <div class="friendCard p-2 flex justify-between items-center ">
+       <div class="friendProfile flex ">
+         <div class="profile w-[30px] h-[30px] mr-[10px]">
+  <img class="w-full h-full object-cover rounded-full" src="../assets/images/fri7.avif" alt="">
+         </div>
+         <div class="userName font-bold">Chris Pratt</div>
+       </div>
+       <div class="optButton flex items-center justify-between">
+         <button class="friBtn friBtnDelete py-[3px] px-[20px] mr-2 bg-red-600 rounded-xl text-white text-sm">Delete</button>
+       </div>
+     </div>
+
+     <div class="friendCard p-2 flex justify-between items-center ">
+       <div class="friendProfile flex ">
+         <div class="profile w-[30px] h-[30px] mr-[10px]">
+  <img class="w-full h-full object-cover rounded-full" src="../assets/images/fri7.avif" alt="">
+         </div>
+         <div class="userName font-bold">Chris Pratt</div>
+       </div>
+       <div class="optButton flex items-center justify-between">
+         <button class="friBtn friBtnDelete py-[3px] px-[20px] mr-2 bg-red-600 rounded-xl text-white text-sm">Delete</button>
+       </div>
+     </div>
+     <div class="friendCard p-2 flex justify-between items-center ">
+       <div class="friendProfile flex ">
+         <div class="profile w-[30px] h-[30px] mr-[10px]">
+  <img class="w-full h-full object-cover rounded-full" src="../assets/images/fri7.avif" alt="">
+         </div>
+         <div class="userName font-bold">Chris Pratt</div>
+       </div>
+       <div class="optButton flex items-center justify-between">
+         <button class="friBtn friBtnDelete py-[3px] px-[20px] mr-2 bg-red-600 rounded-xl text-white text-sm">Delete</button>
+       </div>
+     </div>
+     
+     
+   </div>
+ </div>
+        </div>
+      </div>  
+    </div>
+
+  </body>
+</html>

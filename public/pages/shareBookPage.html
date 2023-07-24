@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Share Book page</title>
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="icon" href="../assets/images/WeTalk_logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --default_background_color:#F5F5F5;
+  --headerNavBar_background_color:#009EF7;
+  --createPost_background_color:#BFE7FD;
+  --content_background_color:#ECFCFF;
+  --menu_background_color:#36E0E0;
+  --logo_color:#FF6163;
+  --createPost_title_color:#0095E8;
+  --pin_NavBar_color:#002E76;
+  --menu_font:13px;
+  --logo_font:24px;
+  --title_font:15px;
+  --navBar_font:25px;
+  --profile_size:30px;
+  --homePage_width:24.375rem;
+  --homePage_height:52.75rem;
+  --header_height:3.75rem;
+  --createPost_height:9.375rem;
+  --navbar_height:2.5rem;
+}
+
+
+.navBar__shareBook::after{
+      display: block;
+      content: "";
+      width: 40px;
+      height: 2px;
+      background-color: #1349a0;
+      border-radius: 10px;
+      margin: 0.1rem auto;
+}
+.layout .layout__container .homePage__postContainer .homePage__container__createPost {
+  height: 190px;
+  background-color: #BFE7FD;
+  margin-top: 15px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__title h3 {
+  font-size: var(--title_font);
+  color: var(--createPost_title_color);
+}
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__title::after {
+  display: block;
+  content: "";
+  width: 365px;
+  height: 1px;
+  background-color: #E6F4F1;
+  border-radius: 10px;
+  margin: 0.1rem auto;
+}
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText {
+  display: flex;
+  align-items: start;
+  padding: 10px 0;
+}
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText .userProfile {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #E6F4F1;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+}
+
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText .userProfile:hover {
+  transform: scale(0.95);
+  transition: 0.5s;
+}
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText #writePost {
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  
+}
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText #writePost #namebook {
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #3DADEB;
+  padding: 10px;
+  font-size: var(--text_font);
+}
+.bx-book-add{
+    font-size: 35px;
+}
+.userProfile p{
+    font-size: 13px;
+}
+#someDescription{
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #3DADEB;
+    padding: 10px;
+    font-size: var(--text_font);
+}
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText #writePost input::-moz-placeholder {
+  color: #A1A5B7;
+}
+.layout .layout__container .homePage__postContainer .homePage__container__createPost .createPost__profile_inputText #writePost input::placeholder {
+  color: #A1A5B7;
+}
+    /* width */
+    .newReleaseContainer::-webkit-scrollbar {
+        width: 1px;
+      }
+
+      /* Track */
+      .newReleaseContainer::-webkit-scrollbar-track {
+        background: #E7F6F5; 
+      }
+      
+      /* Handle */
+      .newReleaseContainer::-webkit-scrollbar-thumb {
+        background: #E7F6F5; 
+      }
+
+      /* Handle on hover */
+      .newReleaseContainer::-webkit-scrollbar-thumb:hover {
+        background: #E7F6F5; 
+      }
+
+    .newReleaseCard{
+        transition: 0.5s;
+    }
+    .newReleaseCard:hover{
+        transition: 0.3s;
+        transform: scale(0.95);
+    }
+    .btnAddBook:hover{
+        background-color: #0000ffab;
+    }
+    
+</style>
+  <body>
+    <!-- home page -->
+    <div class="layout" >
+      <!-- container -->
+      <div class="layout__container">
+        <!-- header -->
+        <header class="container__header">
+          <!-- logo -->
+          <div class="header__logo">
+            <a href="./homePage.html" class="logo">
+              <img src="../assets/images/WeTalk_logo.png" alt="WeTalk logo">
+            </a>
+            <div class="logoName"><h2>WeTalk</h2></div>
+          </div>
+          <!-- user profile -->
+          <div class="header__profile">
+            
+            <a href="./profilePage.html">
+                <div class="profile">
+                  <img src="../assets/images/user_profile.jpg" alt="user profile">
+                </div>
+            </a>
+          </div>
+        </header>
+
+        <!-- navigation bar -->
+        <nav class="container__navBar">
+          <!-- home -->
+          <a href="./homePage.html" class="navBar__home  navIcon">
+            <i class='bx bxs-home-alt-2' style="color: #BFE7FD; "></i>
+          </a>
+          <!-- friend -->
+          <a href="./friendpage.html" class="navBar__friend navIcon">
+            <i class='bx bxs-user-account'></i>
+          </a>
+          <!-- share book -->
+          <a href="./shareBookPage.html" class="navBar__shareBook navIcon">
+            <i class='bx bx-book' style="color: #002E76;"></i>
+          </a> 
+          <!-- chat -->
+          <a href="./chatPage.html" class="navBar__chat navIcon">
+            <i class='bx bx-message-alt-edit'></i>
+          </a> 
+        </nav>
+
+    
+        <div class="homePage__postContainer">
+
+            <!-- create post section -->
+            <div class="homePage__container__createPost shadow">
+                <!-- title -->
+                <div class="createPost__title">
+                <h3>Upload Book</h3>
+                </div>
+                <!-- profile write post section -->
+                <div class="createPost__profile_inputText">
+                <!-- profile -->
+                <div class="prof flex flex-col">
+                    <div class="userProfile">
+                        <i class='bx bx-book-add'></i>
+                        <p>Add PDF</p>
+                    </div>
+                    <button class="btnAddBook text-sm bg-[#0000FF] rounded-lg p-1 text-white mt-2 mr-3">Add Book</button>
+
+                </div>
+                
+                <!-- write post -->
+                <div id="writePost" class="">
+                    <input id="namebook" type="text" placeholder="Add book name">
+                    <input id="someDescription" class="mt-1" type="text" placeholder="Add some descriptions">
+                </div>
+                </div>
+                
+            </div>
+
+            <div class="newRelease ">
+                <div class="subtitle text-xl font-bold px-3 pt-2">New release</div>
+                <hr style="width: 95%; border-color:#A9CBDD; margin: auto; ">
+                <div style="display: grid; grid-template-columns: repeat(3,auto);" class="newReleaseContainer pt-2 w-full p-[5px] pb-[15px] shadow bg-[#ECFCFF] gap-1 justify-center mt-1 overflow-auto">
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">HTML</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://static.vecteezy.com/system/resources/previews/012/697/299/original/stylized-3d-html-logo-design-free-png.png" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bxs-star text-[#00A3ED]'></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">CSS</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bxs-star text-[#00A3ED]'></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">JS</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://www.freepnglogos.com/uploads/javascript-png/javascript-logo-transparent-logo-javascript-images-3.png" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bx-star '></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">Avatar</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bx-star'></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">Avatar</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bx-star '></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">Avatar</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bx-star '></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="newRelease ">
+                <div class="subtitle text-xl font-bold px-3 pt-2">All books</div>
+                <hr style="width: 95%; border-color:#A9CBDD; margin: auto; ">
+                <div style="display: grid; grid-template-columns: repeat(3,auto);" class="newReleaseContainer pt-2 w-full h-[200px] p-[5px] pb-[20px] shadow  bg-[#ECFCFF] gap-1 justify-center mt-1 overflow-auto">
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">HTML</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://static.vecteezy.com/system/resources/previews/012/697/299/original/stylized-3d-html-logo-design-free-png.png" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bxs-star text-[#00A3ED]'></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">CSS</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bxs-star text-[#00A3ED]'></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">JS</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://www.freepnglogos.com/uploads/javascript-png/javascript-logo-transparent-logo-javascript-images-3.png" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bx-star '></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+                    
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">Avatar</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bxs-star text-[#00A3ED]'></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">OnePiece</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/1ecde018e863e2aaee31f00a23378c35.jpe" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-1 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bxs-star text-[#00A3ED]'></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">MKnight</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://m.media-amazon.com/images/M/MV5BYTc5OWNhYjktMThlOS00ODUxLTgwNDQtZjdjYjkyM2IwZTZlXkEyXkFqcGdeQXVyNTA3MTU2MjE@._V1_.jpg" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-1 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bx-star '></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">Avatar</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bx-star'></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">Avatar</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bx-star '></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">Avatar</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bx-star '></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">Avatar</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bx-star'></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">Avatar</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bx-star '></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">Avatar</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bx-star '></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">Avatar</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bx-star'></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">Avatar</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bx-star '></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+
+                    <div style="cursor: pointer;box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;" class="newReleaseCard w-[120px] h-[90px] flex  bg-white rounded-lg p-2  relative ">
+                        <div class="bookleftSection ">
+                            <div class="title text-[15px] font-semibold text-center">Avatar</div>
+                            <div class="image"><img class="w-[50px] h-[50px] object-cover rounded-md" src="https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg" alt=""></div>
+                        </div>
+                        <div class="bookrightSection pl-2 w-3/5 pt-[20px]">
+                            <div id="favIcon" class="favIcon  absolute top-0 right-1"><i class='bx bxs-star text-[#00A3ED]'></i></div>
+                            <div class="description text-[7px] text-gray-500 ">Lorem ipsum, dolor sit amet consectetur  </div>
+                            <div class="author text-[10px] pt-0.5 font-semibold text-[#125779]">Ochi</div>
+                            <div class="dataPost text-[7px] text-[#808080] absolute bottom-1 right-1">23/07/2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+
+        </div>
+        
+      </div>
+
+    </div>
+</body>
+
+
+</html>
